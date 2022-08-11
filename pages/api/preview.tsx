@@ -1,6 +1,6 @@
-import { getPreviewPostBySlug } from '../../lib/api'
+import { getPreviewPostBySlug } from 'lib/api'
 
-export default async function preview(req, res) {
+export default async function preview(req: any, res: any) {
   const { secret, slug } = req.query
 
   if (secret !== process.env.CONTENTFUL_PREVIEW_SECRET || !slug) {

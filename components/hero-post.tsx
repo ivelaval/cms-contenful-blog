@@ -1,7 +1,16 @@
 import Link from 'next/link'
-import Avatar from '../components/avatar'
-import DateComponent from '../components/date'
-import CoverImage from '../components/cover-image'
+import Avatar from 'components/avatar'
+import DateComponent from 'components/date'
+import CoverImage from 'components/cover-image'
+
+interface IHeroPost {
+  title: string;
+  coverImage: any;
+  date: string;
+  excerpt: string;
+  author: any;
+  slug: string;
+}
 
 export default function HeroPost({
   title,
@@ -10,7 +19,7 @@ export default function HeroPost({
   excerpt,
   author,
   slug,
-}) {
+}: IHeroPost) {
   return (
     <section>
       <div className="mb-8 md:mb-16">

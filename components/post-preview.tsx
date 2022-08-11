@@ -1,7 +1,16 @@
 import Link from 'next/link'
-import Avatar from '../components/avatar'
-import DateComponent from '../components/date'
+import Avatar from 'components/avatar'
+import DateComponent from 'components/date'
 import CoverImage from './cover-image'
+
+interface IPostPreview {
+    title: string;
+    coverImage: any;
+    date: string;
+    author: any;
+    excerpt: string;
+    slug: string;
+}
 
 export default function PostPreview({
   title,
@@ -10,7 +19,7 @@ export default function PostPreview({
   excerpt,
   author,
   slug,
-}) {
+}: IPostPreview) {
   return (
     <div>
       <div className="mb-5">
